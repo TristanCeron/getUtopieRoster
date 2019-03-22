@@ -24,11 +24,11 @@ class Roster(Resource):
       
       return Response(json_util.dumps(p), mimetype='application/json')
     
-class Roster(Resource):
+class Home(Resource):
     def get(self):
         return "Home"
     
- class Roster(Resource):
+class Icon(Resource):
     def get(self):
         return
     
