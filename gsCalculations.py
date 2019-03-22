@@ -65,7 +65,7 @@ def getCharInfo(name):
   gs = 0
   
   client = MongoClient(GV.mongoURL)
-  db = client["myDB"]
+  db = client[GV.database]
   itemCollect = db["items"]
 
   talent = ["", ""]
@@ -117,7 +117,7 @@ def getRoster():
   r = requests.get("https://armory.warmane.com/api/guild/" + GV.guild + "/" + GV.server + "/summary").json()
 
   client = MongoClient(GV.mongoURL)
-  db = client["myDB"]
+  db = client[GV.database]
   toonCollect = db["characters"]
   toonCollect.drop()
 
