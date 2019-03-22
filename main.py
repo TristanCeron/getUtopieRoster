@@ -15,7 +15,7 @@ api = Api(app)
 class Roster(Resource):
     def get(self):
       client = MongoClient(GV.mongoURL)
-      db = client["myDB"]
+      db = client[GV.database]
       toonCollect = db["characters"]
       table = toonCollect.find()
       p = []
