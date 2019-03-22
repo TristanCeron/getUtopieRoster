@@ -3,7 +3,8 @@ import os
 port = os.environ.get('PORT') or 5000
 guild =os.environ.get('GUILD') or "Utopie"
 server = os.environ.get('SERVER') or "Lordaeron"
-mongoURL = os.environ.get('MONGO_DB')
+mongoURL = os.environ.get('MONGO_URI')
+database = os.environ.get('MONGO_DB')
 
 
 
