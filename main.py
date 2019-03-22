@@ -7,7 +7,7 @@ from bson import json_util
 import gsCalculations as calc
 import globalVars as GV
 
-print('start')
+#print('start')
 
 app = Flask(__name__)
 api = Api(app)
@@ -35,6 +35,6 @@ api.add_resource(Character, '/name/<name>')
 
 
 if __name__ == '__main__':
-     app.run(debug=True, port=GV.port, host='0.0.0.0')
+     app.run(debug=False, port=GV.port)
 
-print('end')
+#print('end')
