@@ -23,18 +23,28 @@ class Roster(Resource):
         p.append(test)
       
       return Response(json_util.dumps(p), mimetype='application/json')
-
+    
+class Roster(Resource):
+    def get(self):
+        return "Home"
+    
+ class Roster(Resource):
+    def get(self):
+        return
+    
 class Character(Resource):
     def get(self, name):
         p = calc.getCharInfo(name)
         return p
         
 
-api.add_resource(Roster, '/roster') # Route_1
+api.add_resource(Roster, '/roster')
+api.add_resource(Home, '/')
+api.add_resource(Icon, '/favicon.ico')
 api.add_resource(Character, '/name/<name>')
 
 
 if __name__ == '__main__':
-     app.run(debug=False, port=GV.port)
+    app.run(debug=True, port=GV.port, host='0.0.0.0')
 
 #print('end')
